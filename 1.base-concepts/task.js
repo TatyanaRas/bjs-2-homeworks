@@ -19,7 +19,7 @@ function solveEquation(a, b, c) {
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
 
-	let perCent = parseInt(percent) / 100 / 12;/ставка в месяц
+	let perCent = parseInt(percent) / 100 / 12;//ставка в месяц
 	let contr = parseInt(contribution);
 	let amt = parseInt(amount);
 	let count = parseInt(countMonths);
@@ -32,7 +32,7 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
 	let totalAmount = (payment * count).toFixed(2);
 	
 	console.log(totalAmount);
-	return parseInt(totalAmount);
+	return +(totalAmount);
 }
 
 
