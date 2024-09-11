@@ -18,7 +18,11 @@ function getArrayParams(...arr) {
 		sum = sum + arr[i];
 	}
 	avg = parseInt((sum / arr.length).toFixed(2));
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> a89a4bfb65b395990575235d74afece4b3ac6145
 	return {
 		min: min,
 		max: max,
@@ -27,9 +31,15 @@ function getArrayParams(...arr) {
 }
 
 
+<<<<<<< HEAD
 //задача 2 
 
 function summElementsWorker(...arr) { //суммирование элементов
+=======
+ //задача 2 
+
+ function summElementsWorker(...arr) { //суммирование элементов
+>>>>>>> a89a4bfb65b395990575235d74afece4b3ac6145
 
 	if (arr.length === 0) {
 		return 0;
@@ -61,9 +71,15 @@ function differenceMaxMinWorker(...arr) { //разница макс и мин
 			max = arr[i];
 		} else
 			min = arr[i]
+<<<<<<< HEAD
 		dif = max - min;
 	}
 
+=======
+dif = max - min;
+	}
+	
+>>>>>>> a89a4bfb65b395990575235d74afece4b3ac6145
 
 	return dif;
 
@@ -103,7 +119,11 @@ function averageEvenElementsWorker(...arr) { //среднее значение �
 		if (arr[i] % 2 == 0) {
 			sumEvenElement = sumEvenElement + arr[i];
 			countEvenElement = countEvenElement + 1;
+<<<<<<< HEAD
 		}
+=======
+		} 
+>>>>>>> a89a4bfb65b395990575235d74afece4b3ac6145
 	}
 
 	return sumEvenElement / countEvenElement;
@@ -112,6 +132,7 @@ function averageEvenElementsWorker(...arr) { //среднее значение �
 
 //задача 3
 function makeWork(arrOfArr, func) {
+<<<<<<< HEAD
 
 	let maxWorkerResult = arrOfArr[0];
 
@@ -125,3 +146,19 @@ function makeWork(arrOfArr, func) {
 	}
 	return maxWorkerResult;
 }
+=======
+
+	let maxWorkerResult = arrOfArr[0];
+	
+	for (let i = 0; i < arrOfArr.lenght; i++) {
+
+		const max = func(...arrOfArr[i]);
+
+		if (max > maxWorkerResult) {
+			maxWorkerResult = max;
+		}
+	}
+	return maxWorkerResult;
+}
+
+>>>>>>> a89a4bfb65b395990575235d74afece4b3ac6145
