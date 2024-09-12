@@ -8,7 +8,7 @@ function getArrayParams(...arr) {
 	let avg = 0;
 	let sum = 0;
 
-	for (let i = 0; i < arr.lenght; i++) {
+	for (let i = 0; i < arr.length; i++) {
 		if (arr[i] > max) {
 			max = arr[i];
 		}
@@ -17,7 +17,7 @@ function getArrayParams(...arr) {
 		}
 		sum = sum + arr[i];
 	}
-	avg = parseInt((sum / arr.length).toFixed(2));
+	avg = parseFloat((sum / arr.length).toFixed(2));
 
 	return {
 		min: min,
@@ -113,16 +113,17 @@ function averageEvenElementsWorker(...arr) { //среднее значение �
 //задача 3
 function makeWork(arrOfArr, func) {
 
-	let maxWorkerResult = arrOfArr[0];
+	let maxWorkerResult = func(...arrOfArr[0]);
 
-	for (let i = 0; i < arrOfArr.lenght; i++) {
+	for (let i = 0; i < arrOfArr.length; i++) {
 
-		const max = func(...arrOfArr[i]);
+		let max = func(...arrOfArr[i]);
 
-		if (max > maxWorkerResult) {
+		if (maxWorkerResult < max) {
 			maxWorkerResult = max;
 		}
 		
 	}
 	return maxWorkerResult;
 }
+
